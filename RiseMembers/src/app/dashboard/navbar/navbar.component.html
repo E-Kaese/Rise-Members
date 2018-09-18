@@ -1,0 +1,20 @@
+<nav class="navbar navbar-expand-md navbar-dark navigation fixed-top" *ngIf="!router.url.includes('/dashboard/login')">
+    <button id="toggler" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Content" aria-controls="Content" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="Content">
+        <ul class="navbar-nav mx-auto">
+            <li class="nav-item mx-3" (click)="toggle()">
+                <a class="nav-link" [routerLink]="['/dashboard/main']">ADD MEMBER</a>
+            </li>
+            <li class="nav-item mx-3" (click)="toggle()">
+                <a class="nav-link" [routerLink]="['/dashboard/edit']">EDIT MEMBER</a>
+            </li>
+            <li class="nav-item mx-3" (click)="toggle()">
+                <a class="nav-link" [routerLink]="['/dashboard/remove']">REMOVE MEMBER</a>
+            </li>
+        </ul>
+        <button class="btn btn-light text-dark my-1" (click)='ds.logout()'>LOGOUT</button>
+    </div>
+</nav>

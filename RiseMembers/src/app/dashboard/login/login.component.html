@@ -1,0 +1,10 @@
+<div class="row mx-0 pt-5 justify-content-center login">
+    <div class="col-md-4 mt-5 p-4 m-2 bg-dark text-light rounded loginBox">
+        <h1 class='text-center mb-5'>Dashboard Login</h1>
+        <input type="email" name="email" id="email" #email ngModel placeholder="Email" class="form-control">
+        <br>
+        <input type="password" name="password" id="password" #password ngModel placeholder="Password" class="form-control">
+        <br>
+        <button class="btn btn-primary float-right" (click)='ds.login(email.value, password.value)'>Login</button>
+    </div>
+</div>
